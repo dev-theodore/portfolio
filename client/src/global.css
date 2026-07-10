@@ -1,5 +1,31 @@
 :root {
-    /* --primary-color: red;
+    /* colors */
+    --primary-color: red;
     --secondary-color: green;
-    --accent-color: blue; */
+    --tertiary-color: blue;
+    --backgroung-color: purple;
+    --text-color: ;
+    --heading-color: ;
+    --link-text-color: ;
+
+    /* typography */
+    --font-family: "jetBrains mono";
+    --bold-font: bold;
+    --font-size: ;
+
+
+    /*layout*/
+    --padding: 10px;
+    --border-radius: 3px;
+    --flex-gap: 20px;
+    --grid-gap: 20px;
+    --border: 1px solid var(--primary-color);
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    font-family: var(--font-family);
+    padding-inline: 50px;
+    box-sizing: border-box;
 }

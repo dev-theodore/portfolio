@@ -1,17 +1,19 @@
 :root {
     /* colors */
-    --primary-color: red;
-    --secondary-color: green;
-    --tertiary-color: blue;
-    --backgroung-color: purple;
-    --text-color: ;
-    --heading-color: ;
-    --link-text-color: ;
+    --primary-color: #58c4dc;
+    --accent-color: #9CB080;
+    --background: #16181d;
+    --border-color: #1b1d24;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;;
+    --hover-color: #1b1d24;
 
     /* typography */
-    --font-family: "jetBrains mono";
-    --bold-font: bold;
-    --font-size: ;
+    --heading-font: "Space Grotesk", sans-serif;
+    --text-font: "Inter", sans-serif;
+    --text-size: 1rem;
+    --title-size: 2rem;
 
 
     /*layout*/
@@ -19,13 +21,13 @@
     --border-radius: 3px;
     --flex-gap: 20px;
     --grid-gap: 20px;
-    --border: 1px solid var(--primary-color);
+    --border: 1px solid var(--border-color);
 }
 
 body {
     margin: 0;
     width: 100vw;
-    font-family: var(--font-family);
-    padding-inline: 50px;
     box-sizing: border-box;
+    font-optical-sizing: auto;
+    background-color: var(--background);
 }

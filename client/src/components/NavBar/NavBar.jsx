@@ -8,10 +8,12 @@ function NavBar() {
             <div className={styles.logo}>Logo</div>
 
             <nav aria-label="Main Naviagtion" className={styles.nav}>
-                <ul className={styles.ul}> { pages.map(page => <li value={page} className={styles.li}> {page} </li> )}</ul>
+                <ul className={styles.ul}>
+                    {pages.map(page => <li value={page} className={styles.li}> {page} </li> )}
+                </ul>
             </nav>
             
-            <div className={styles.themeToggle}>Toggle</div>
+            <div className={styles.themeToggle}>x</div>
         </header>
     )
 }

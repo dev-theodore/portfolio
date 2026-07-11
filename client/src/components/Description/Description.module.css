@@ -1,0 +1,19 @@
+.container {
+    margin-top: var(--space);
+    display: flex;
+    flex-direction: column;
+    gap: var(--flex-gap);
+
+    h1 {
+        margin: 0;
+        color: var(--text-primary);
+        font-family: var(--heading-font);
+        font-size: var(--title-size);
+    }
+
+    p {
+        margin: 0;
+        color: var(--text-secondary);
+        font-family: var(--text-font);
+    }
+}

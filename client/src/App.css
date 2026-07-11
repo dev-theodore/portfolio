@@ -1,0 +1,9 @@
+/* .app {
+
+} */
+
+#main-content {
+    width: 100%;
+    padding-inline: max(6%, 20px);
+    box-sizing: border-box;
+}

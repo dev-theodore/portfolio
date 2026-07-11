@@ -10,52 +10,86 @@
     top: 0;
     gap: var(--flex-gap);
     color: var(--text-secondary);
-    font-family: var(--heading-font);
-    font-size: var(--text-size);
+    font-family: var(--text-font);
+    font-weight: 400;
+    font-size: calc(var(--text-size) - 10%);
     border-bottom: var(--border);
     background-color: var(--background);
+    letter-spacing: 1px;
+    overflow: hidden;
 
     ul {
+        height: 100%;
         display: flex;
-        gap: var(--flex-gap);
+        gap: 30px;
+        align-items: center;
         list-style-type:none;
         margin: 0;
     }
 
     .nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 
     .logo {
-    color: var(--primary-color);
+        color: var(--primary-color);
     }
 }
 
 li {
     transition: 0.2s;
-    padding: var(--padding);
-    border-radius: var(--border-radius);
+    height: 100%;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--background);
+    position: relative;
 
     &:hover {
         color: var(--primary-color);
     } 
 }
 
-.logo, .themeToggle, li{
+.logo, .toggle, li{
     cursor: pointer;
 }
 
-.themeToggle {
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    /* background-color: var(--hover-color); */
-    border: 2px solid var(--border-color);
+.toggle {
+    height: var(--text-size);
+    width: var(--text-size);
+    background-color: var(--hover-color);
+    padding: 5px;
+    border: var(--border);
+    color: var(--accent-color);
+    border-radius: 50%;
 
     &:hover {
         background-color: var(--hover-color);
     }
 }
 
+.divider {
+    width: 2px;
+    background-color: var(--hover-color);
+    padding-block: var(--padding);
+}
+
+.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+
+    /* &::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 47px;
+        left: 0;
+        background-color: var(--primary-color);
+        border-radius: 2px;
+    } */
+}

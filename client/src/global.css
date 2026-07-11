@@ -18,7 +18,9 @@
 
     /*layout*/
     --padding: 10px;
+    --space: 100px;
     --border-radius: 3px;
+    --default-gap: 10px;
     --flex-gap: 20px;
     --grid-gap: 20px;
     --border: 1px solid var(--border-color);
@@ -26,7 +28,7 @@
 
 body {
     margin: 0;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     font-optical-sizing: auto;
     background-color: var(--background);

@@ -1,0 +1,22 @@
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-gap);;
+    width: max-content;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: var(--text-font);
+
+    p {
+        color: var(--text-secondary);
+        margin: 0;
+    }
+}
+
+.container {
+    display: flex;
+    gap: var(--default-gap);
+    width: max-content;
+    justify-content: flex-start;
+    align-items: center;
+}

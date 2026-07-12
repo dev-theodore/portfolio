@@ -1,24 +1,12 @@
 //functions for handling max word count displayed on cards
 
 const descriptionTrimer = (text) => {
-
-    if (text.length > 35) {
-        let sentence = text.slice(0, 35)
-        let newSentence = sentence + '...'
-        return newSentence
-    }
-
+    text = text.length > 35 ? text.slice(0, 35) + '...' : text
     return text
 }
 
 const titleTrimer = (text) => {
-    
-    if (text.length > 25) {
-        let sentence = text.slice(0, 25)
-        let newSentence = sentence + '...'
-        return newSentence
-    }
-
+    text = text.length > 25 ? text.slice(0, 25) + '...' : text
     return text
 }
 

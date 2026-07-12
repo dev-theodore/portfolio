@@ -5,10 +5,12 @@
     padding: 5px var(--padding);
     color: var(--text-muted);
     font-family: var(--text-font);
-    font-size: 12px;
+    font-size: var(--little-size);
     cursor: pointer;
     height: max-content;
-    transition: 0.1s;
+    transition: 0.2s;
+    letter-spacing: 1px;
+    background-color: var(--background);
 
     &:hover {
         background-color: var(--hover-color);
@@ -25,6 +27,16 @@
     p {
         margin: 0;
     }
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    transition: 0.2s;
+}
+
+.icon_rotate {
+    rotate: -180deg;
 }
 
 .active {

@@ -5,6 +5,8 @@ import styles from './NavBar.module.css'
 
 function NavBar({ pages, theme, activePage, changeTheme, setActivePage }) {
 
+    const [forward, backward] = [{rotate: '360deg'}, {rotate: '-360deg'}]
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>Logo</div>
@@ -22,12 +24,15 @@ function NavBar({ pages, theme, activePage, changeTheme, setActivePage }) {
 
             <div className={styles.divider}></div>
             
-            <div className={styles.toggle} onClick={changeTheme}>
-                {
-                    theme === 'dark' ? 
-                    <SunMedium size={16} /> : 
-                    <Moon size={16}/>
-                }
+            <div 
+                className={styles.toggle} 
+                onClick={changeTheme}
+                style={theme === 'dark' ? forward : backward}>
+                    {
+                        theme === 'dark' ? 
+                        <SunMedium size={16} /> : 
+                        <Moon size={16} />
+                    }
             </div>
         </header>
     )

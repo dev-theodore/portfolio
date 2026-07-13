@@ -9,16 +9,8 @@
     font-family: var(--text-font);
     color: var(--text-secondary);
     margin-bottom: 20px;
-    cursor: pointer;
     transition: 0.2s;
-
-    &:hover {
-
-        img {
-            scale: 1.05;
-        }
-
-    }
+    cursor: default;
 }
 
 .image {
@@ -32,6 +24,15 @@
     overflow: hidden;
     display: grid;
     position: relative;
+    cursor: pointer;
+
+    &:hover {
+
+        img {
+            scale: 1.03;
+        }
+
+    }
 
     img {
         width: 100%;
@@ -52,6 +53,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        display: none;
 
         button {
             color: var(--accent-color);
@@ -69,6 +71,7 @@
         height: 100%;
         width: 100%;
         grid-area: 1/1;
+        display: none;
     }
 }
 

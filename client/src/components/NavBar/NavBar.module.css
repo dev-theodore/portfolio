@@ -18,21 +18,14 @@
     letter-spacing: 1px;
     overflow: hidden;
 
-    ul {
-        height: 100%;
-        display: flex;
-        gap: 30px;
-        align-items: center;
-        list-style-type:none;
-        margin: 0;
-    }
-
     .nav {
         height: 100%;
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        gap: 30px;
+        margin: 0;
     }
 
     .logo {
@@ -40,7 +33,7 @@
     }
 }
 
-li {
+.nav_link {
     transition: 0.2s;
     height: 100%;
     display: grid;
@@ -48,13 +41,17 @@ li {
     box-sizing: border-box;
     border-bottom: 2px solid var(--background);
     position: relative;
+    text-decoration: none;
+    font-family: var(--text-font);
+    color: var(--text-secondary);
 
     &:hover {
         color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
     } 
 }
 
-.logo, .toggle, li{
+.logo, .toggle, .nav_link{
     cursor: pointer;
 }
 
@@ -81,15 +78,4 @@ li {
 .active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
-
-    /* &::before {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 47px;
-        left: 0;
-        background-color: var(--primary-color);
-        border-radius: 2px;
-    } */
 }

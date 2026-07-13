@@ -59,8 +59,8 @@
             background-color: #1b1d2457;
             padding: 4px;
             border-radius: var(--border-radius);
-            backdrop-filter: blur(10px); 
             -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); 
         }
     }
 

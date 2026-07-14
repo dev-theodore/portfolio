@@ -6,9 +6,8 @@ function Links({ link, icon }) {
             href={link} 
             target="_blank" 
             rel="noopener noreferrer"
-            className={styles.links}>
-                {icon}
-        </a>
+            className={styles.links}
+        >{icon}</a>
     )
 }
 

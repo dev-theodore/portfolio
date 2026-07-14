@@ -33,4 +33,5 @@
 .category_container, .filter {
     position: sticky;
     top: 50px;
+    z-index: 3;
 }

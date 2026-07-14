@@ -1,43 +1,38 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { Moon, SunMedium } from 'lucide-react'
 import styles from './NavBar.module.css'
 
 
-function NavBar() {
-    const pages = ['Home', 'Software Projects', '3D Artwork', 'About', 'Skills', 'Contact'];
-    const [theme, setTheme] = useState('dark')
-    
+function NavBar({ pages, theme, activePage, changeTheme, setActivePage }) {
 
-    function changeTheme() {
-        theme === 'dark' ? setTheme('light') : setTheme('dark')
-    }
+    const [forward, backward] = [{rotate: '360deg'}, {rotate: '-360deg'}]
 
     return (
         <header className={styles.header}>
             <div className={styles.logo}>Logo</div>
 
             <nav aria-label="Main Naviagtion" className={styles.nav}>
-                <ul className={styles.ul}>
-
-                    {pages.map(page => 
-                        <li value={page} 
-                            key={page}
-                            className={styles.li}> 
-                            {page} 
-                        </li> 
-                    )}
-
-                </ul>
+                {pages.map(page => 
+                    <Link 
+                        key={page.id}
+                        to={page.path}
+                        className={`${styles.nav_link}  ${activePage === page.name ? styles.active : ''}`}
+                        onClick={() => {setActivePage(page.name)}}
+                    >{page.name}</Link>
+                )}
             </nav>
 
             <div className={styles.divider}></div>
             
-            <div className={styles.toggle} onClick={changeTheme}>
-                {
-                    theme === 'dark' ? 
-                    <SunMedium size={16} /> : 
-                    <Moon size={16}/>
-                }
+            <div 
+                className={styles.toggle} 
+                onClick={changeTheme}
+                style={theme === 'dark' ? forward : backward}>
+                    {
+                        theme === 'dark' ? 
+                        <SunMedium size={16} /> : 
+                        <Moon size={16} />
+                    }
             </div>
         </header>
     )

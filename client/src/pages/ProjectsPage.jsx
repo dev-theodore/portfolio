@@ -5,14 +5,14 @@ import styles from './ProjectsPage.module.css'
 import { useState, useEffect } from 'react'
 import { CategoryTab, FilterTab } from '../components/Tabs/Tabs'
 
-function ProjectsPage() {
+function ProjectsPage({ title }) {
 
     const [activeTab, setActiveTab] = useState('All')
     const [artwork, setArtwork] = useState([])
     // const [projects, setProjects] = useState([])
 
     const descriptions = {
-        webDesc: "A collection of all the projects i've built",
+        webDesc: "A collection of all the projects I've built",
         artworkDesc: 'Browse my collection of recent artworks'
     }
 
@@ -27,7 +27,7 @@ function ProjectsPage() {
                 const artworks = await getArtwork()
 
                 if (Array.isArray(artworks)) {
-                    setArtwork(artworks)
+                    await setArtwork(artworks)
                 } else {
                     throw new Error('could not find artwork', artworks)
                 }
@@ -41,8 +41,8 @@ function ProjectsPage() {
     return (
         <div className={styles.page}>
             <Description 
-                title='3D Artwork'
-                description={descriptions.artworkDesc}
+                title={title}
+                description={title === '3D Artwork' ? descriptions.artworkDesc : descriptions.webDesc}
             />
 
             <div className={styles.category_container}>

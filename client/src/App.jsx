@@ -3,6 +3,7 @@ import { useState } from 'react';
 import NavBar from "./components/NavBar/NavBar"
 import LandingPage from "./pages/LandingPage"
 import ProjectsPage from "./pages/ProjectsPage"
+import SoftwareDetails from './pages/SoftwareDetails';
 import Footer from "./components/Footer/Footer"
 import "./App.css"
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/software-projects" element={<ProjectsPage title={activePage} />} />
           <Route path="/3d-artwork" element={<ProjectsPage title={activePage} />} />
+          <Route path="/about" element={<SoftwareDetails />} />
           <Route path="*" element={<h1>Page In Development :|</h1>} />
         </Routes>
       </main>

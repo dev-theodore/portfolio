@@ -7,12 +7,14 @@ import image6 from './images/wallpaperflare.com_wallpaper (2).jpg'
 
 
 const imageSrc = [
-    image2,
-    image1,
-    image4,
-    image3,
-    image5,
-    image6,
+    {id: 1, url: image2},
+    {id: 2, url: image1},
+    {id: 3, url: image4},
+    {id: 4, url: image3},
+    {id: 5, url: image5},
+    {id: 6, url: image6},
+    {id: 7, url: image2},
+    {id: 8, url: image6},
 ]
 
 export default imageSrc

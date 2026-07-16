@@ -7,7 +7,7 @@ const artwork = [
         description: 'Bask in the glory of the sky filled with lamp lights',
         category: 'environment',
         style: 'stylized',
-        image: imageSrc[0],
+        image: imageSrc[0].url,
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const artwork = [
         description: 'The orange light glows on her face',
         category: 'character',
         style: 'stylized',
-        image: imageSrc[1],
+        image: imageSrc[1].url,
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const artwork = [
         description: 'Bask in the glory of the sky filled with lamp lights',
         category: 'character',
         style: 'anime',
-        image: imageSrc[2],
+        image: imageSrc[2].url,
     },
     {
         id: 4,
@@ -31,7 +31,7 @@ const artwork = [
         description: 'An intricate structure that has lingered in the minds of people',
         category: 'abstract',
         style: 'fractal',
-        image: imageSrc[3],
+        image: imageSrc[3].url,
     },
     {
         id: 5,
@@ -39,7 +39,7 @@ const artwork = [
         description: 'The orange light glows on her face',
         category: 'character',
         style: 'stylized',
-        image: imageSrc[4],
+        image: imageSrc[4].url,
     },
     {
         id: 6,
@@ -47,7 +47,7 @@ const artwork = [
         description: 'A city blessed by the colored sky of the incoming sunset',
         category: 'environment',
         style: 'anime',
-        image: imageSrc[5],
+        image: imageSrc[5].url,
     },
     {
         id: 7,
@@ -55,7 +55,7 @@ const artwork = [
         description: 'A city blessed by the colored sky of the incoming sunset',
         category: 'environment',
         style: 'anime',
-        image: imageSrc[5],
+        image: imageSrc[5].url,
     },
     {
         id: 8,
@@ -63,7 +63,15 @@ const artwork = [
         description: 'Bask in the glory of the sky filled with lamp lights',
         category: 'environment',
         style: 'stylized',
-        image: imageSrc[0],
+        image: imageSrc[0].url,
+    },
+    {
+        id: 9,
+        title: 'Lost Soul',
+        description: 'Bask in the glory of the sky filled with lamp lights',
+        category: 'environment',
+        style: 'stylized',
+        image: imageSrc[0].url,
     },
 ]
 

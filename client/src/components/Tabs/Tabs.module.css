@@ -18,6 +18,12 @@
     }
 }
 
+.category {
+    display: flex;
+    gap: var(--default-gap);
+    align-items: center;
+}
+
 .filter {
     display: flex;
     align-items: center;

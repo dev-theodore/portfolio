@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { ChevronDown ,ListFilter} from 'lucide-react';
 import styles from './Tabs.module.css'
 
-function CategoryTab({ category , active, setActiveTab }) {
+function CategoryTab({ category, icon, active, setActiveTab }) {
     return (
         <button className={
             `${styles.category} 
             ${active === category ? styles.active : ''}`}
             onClick={() => setActiveTab(category)}
-        >{category}</button>
+        >{icon}{category}</button>
     )
 }
 

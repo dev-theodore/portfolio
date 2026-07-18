@@ -1,4 +1,5 @@
-import { ExternalLink, MoveUpRight } from 'lucide-react';
+import { ExternalLink, MoveUpRight, ArrowLeft  } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import styles from './Buttons.module.css'
 
 
@@ -23,12 +24,22 @@ function SecondaryButton({ text }) {
 function LinkButton({ link, text, icon }) {
     return (
         <a href={link} className={styles.link}>
-            <div className={styles.icon}>{icon}</div>
-            <div>{text}</div>
+            {icon}
+            {text}
             <ExternalLink size={16} />
         </a>
     )
 }
 
+function BackButton({ path }) {
+    return (
+        <Link 
+            to={path}
+            className={styles.back}
+        ><ArrowLeft size={20} /></Link>
+    )
+}
+
+
 export default PrimaryButton
-export { PrimaryButton, SecondaryButton, LinkButton }
+export { PrimaryButton, SecondaryButton, LinkButton, BackButton }

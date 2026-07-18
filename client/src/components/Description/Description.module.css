@@ -1,5 +1,5 @@
 .container {
-    margin-top: var(--space);
+    /* margin-top: var(--space); */
     display: flex;
     flex-direction: column;
     gap: var(--flex-gap);
@@ -15,5 +15,16 @@
         margin: 0;
         color: var(--text-secondary);
         font-family: var(--text-font);
+    }
+
+    .tabs {
+        display: flex;
+        flex-flow: row wrap;
+        gap: var(--default-gap);
+
+        button {
+            background-color: var(--hover-color);
+            color: var(--text-muted);
+        }
     }
 }

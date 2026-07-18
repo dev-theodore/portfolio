@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar"
 import LandingPage from "./pages/LandingPage"
 import ProjectsPage from "./pages/ProjectsPage"
 import SoftwareDetails from './pages/SoftwareDetails';
+import NotFound from './pages/NotFound';
 import Footer from "./components/Footer/Footer"
 import "./App.css"
 
@@ -42,7 +43,7 @@ function App() {
           <Route path="/software-projects" element={<ProjectsPage title={activePage} />} />
           <Route path="/3d-artwork" element={<ProjectsPage title={activePage} />} />
           <Route path="/about" element={<SoftwareDetails />} />
-          <Route path="*" element={<h1>Page In Development :|</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       

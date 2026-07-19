@@ -1,0 +1,104 @@
+.page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info {
+    width: 100%;
+    height: max-content;
+    padding-top: 30px;
+
+    >section { /*overwriting style of *Description* component*/
+        margin-top: 0;
+        padding-bottom: 20px;
+    }
+
+    >h1 { 
+        margin: 0;
+        padding-top: 30px;
+        font-family: var(--heading-font);
+    }
+
+    .image_container {
+        width: 100%;
+        height: max-content;
+        padding-block: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--flex-gap);
+
+        div {
+            position: relative;
+            display: grid;
+        }
+
+        button {
+            padding: 7px;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            border: 0;
+            color: var(--text-primary);
+            border: 1px solid #1b1d249c;
+            background-color: rgba(0, 0, 0, 0.699);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); 
+            border-radius: 5px;
+            transition: 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: var(--border);
+        }
+    }
+}
+
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* background-color: var(--hover-color); */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+
+    .background_art {
+        grid-area: 1/1;
+        position: relative;
+        height: 100%;
+        /* background-color: red; */
+        border: 1px solid white;
+    }
+
+    .art {
+        grid-area: 1/1;
+        height: 90%;
+        /* background-color: yellow; */
+        border: 1px solid white;
+        z-index: 1;
+    }
+
+    .more {
+        /* background-color: green; */
+        border: 1px solid white;
+        border-radius: 5px;
+        height: 80px;
+        width: 300px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1;
+    }
+}

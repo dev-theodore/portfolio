@@ -10,7 +10,7 @@ const uiIcons = [
 
 ]
 
-const techIcons = [
+const Icons = [
     {id: 1, name: 'React', icon: SiReact, color: 'default'},
     {id: 2, name: 'JavaScript', icon: SiJavascript, color: 'default'},
     {id: 3, name: 'HTML', icon: SiHtml5, color: 'default'},
@@ -38,23 +38,13 @@ const techIcons = [
     {id: 25, name: 'MongoDB', icon: SiMongodb, color: 'default'},
     {id: 23, name: 'WordPress', icon: SiWordpress, color: 'default'},
     {id: 23, name: 'MySQL', icon: SiMysql, color: 'default'},
+    {id: 24, name: 'Blender', icon: SiBlender, color: 'default'},
+    {id: 25, name: 'Maya', icon: SiAutodeskmaya, color: 'default'},
+    {id: 26, name: 'Unreal', icon: SiUnrealengine, color: 'default'},
+    {id: 27, name: 'Unity', icon: SiUnity, color: 'default'},
+    {id: 28, name: 'Godot', icon: SiGodotengine, color: 'default'},
+    {id: 29, name: 'DaVinci Resolve', icon: SiDavinciresolve, color: 'default'},
+    {id: 30, name: 'Krita', icon: SiKrita, color: 'default'},
 ]
 
-const artIcons = [
-    {id: 1, name: 'Blender', icon: SiBlender, color: 'default'},
-    {id: 2, name: 'Maya', icon: SiAutodeskmaya, color: 'default'},
-    {id: 3, name: 'Unreal', icon: SiUnrealengine, color: 'default'},
-    {id: 4, name: 'Unity', icon: SiUnity, color: 'default'},
-    {id: 5, name: 'Godot', icon: SiGodotengine, color: 'default'},
-    {id: 6, name: 'DaVinci Resolve', icon: SiDavinciresolve, color: 'default'},
-    {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},
-    // {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},
-    // {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},
-    // {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},
-    // {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},
-    // {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},
-    // {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},
-    // {id: 7, name: 'Krita', icon: SiKrita, color: 'default'},  
-]
-
-export { uiIcons, techIcons, artIcons }
+export { uiIcons, Icons }

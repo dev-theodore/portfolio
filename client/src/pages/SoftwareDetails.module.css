@@ -9,6 +9,10 @@
         flex-direction: column;
         justify-content: center;
         gap: var(--flex-gap);
+
+        >section { /*overwriting style of *Description* component*/
+            margin-top: 0;
+        }
     }
     
     .image_container {

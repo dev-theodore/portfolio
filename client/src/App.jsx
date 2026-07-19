@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar"
 import LandingPage from "./pages/LandingPage"
 import ProjectsPage from "./pages/ProjectsPage"
 import SoftwareDetails from './pages/SoftwareDetails';
+import ArtworkDetails from './pages/ArtworkDetails';
 import NotFound from './pages/NotFound';
 import Footer from "./components/Footer/Footer"
 import "./App.css"
@@ -24,7 +25,7 @@ function App() {
   const [theme, setTheme] = useState('dark')
 
   function changeTheme() {
-      theme === 'dark' ? setTheme('light') : setTheme('dark')
+    theme === 'dark' ? setTheme('light') : setTheme('dark')
   }
 
   return (
@@ -43,6 +44,8 @@ function App() {
           <Route path="/software-projects" element={<ProjectsPage title={activePage} />} />
           <Route path="/3d-artwork" element={<ProjectsPage title={activePage} />} />
           <Route path="/about" element={<SoftwareDetails />} />
+          <Route path="/skills" element={<ArtworkDetails />} />
+          {/* <Route path="/contact" element={} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

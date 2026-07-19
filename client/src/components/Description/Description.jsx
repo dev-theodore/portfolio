@@ -1,5 +1,5 @@
 import CategoryTab from '../Tabs/Tabs'
-import { techIcons } from '../../data/icons'
+import { Icons } from '../../data/icons'
 import styles from './Description.module.css'
 
 function Description({ title, tabs, description }) {
@@ -11,7 +11,7 @@ function Description({ title, tabs, description }) {
             <h1>{title}</h1>
             <div className={styles.tabs}>
                 {tabs && tabs.map(tab => {
-                    const tabIcon = techIcons.find(icon => tab === icon.name);
+                    const tabIcon = Icons.find(icon => tab === icon.name);
                     const Icon = tabIcon.icon;
 
                     return (

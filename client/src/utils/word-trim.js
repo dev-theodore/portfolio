@@ -1,4 +1,4 @@
-//functions for handling max word count displayed on cards
+//functions for handling max character count displayed on cards
 
 const descriptionTrimer = (text) => {
     text = text.length > 35 ? text.slice(0, 35) + '...' : text
@@ -10,4 +10,9 @@ const titleTrimer = (text) => {
     return text
 }
 
-export { descriptionTrimer, titleTrimer }
+const shortTrimer = (text) => {
+    text = text.length > 15 ? text.slice(0, 15) + '...' : text
+    return text
+}
+
+export { descriptionTrimer, titleTrimer, shortTrimer }

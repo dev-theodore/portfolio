@@ -1,0 +1,56 @@
+.wrapper {
+    min-height: 200px;
+    min-width: 150px;
+    cursor: pointer;
+    border: 2px solid var(--hover-color);
+    border-radius: 6px;
+    padding: 5px;
+    transition: 0.2s;
+
+    &:hover {
+        border-color: var(--primary-color);
+
+        .gradient {
+            background-image: linear-gradient(to top, var(--primary-color) 0%, transparent 50%);
+        }
+    }
+}
+
+.container {
+    border-radius: 4px;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img, h2, .gradient {
+        grid-area: 1/1;
+    }
+
+    img, .gradient {
+        height: 100%;
+        width: 100%;
+    }
+
+    img {
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    h2 {
+        align-self: flex-end;
+        justify-self: center;
+        font-family: var(--heading-font);
+        font-size: 1rem;
+        /* font-weight: 700; */
+    }
+
+    .gradient {
+        transition: 0.2s;
+        background-image: linear-gradient(to top, black 0%, transparent 50%);
+        height: 100%;
+        width: 100%;
+        grid-area: 1/1;
+    }
+}

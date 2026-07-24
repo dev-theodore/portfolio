@@ -1,13 +1,35 @@
 import Description from '../components/Description/Description'
+import ScrollContainer from '../components/ScrollContainer/ScrollContainer'
 import { BackButton } from '../components/Buttons/Buttons'
-// import { SiGumroad, SiPatreon} from '@icons-pack/react-simple-icons'
-import { Maximize2 } from 'lucide-react'
+import { FilterTab } from '../components/Tabs/Tabs'
+import { Maximize2, Expand, ChevronRight } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import getArtwork from '../api/getArtwork'
 import imageSrc from '../data/imageSrc'
 import styles from './ArtworkDetails.module.css'
+
 
 export default function ArtworkDetails() {
 
     const artTabs = ['Blender', 'Maya', 'Unreal', 'Unity', 'Godot','Krita', 'DaVinci Resolve']
+    const [artwork, setArtwork] = useState([])
+
+    useEffect(() => {
+        (async function fetchArtwork() {
+            try {
+                const artworks = await getArtwork()
+
+                if (Array.isArray(artworks)) {
+                    await setArtwork(artworks)
+                } else {
+                    throw new Error('could not find artwork', artworks)
+                }
+                
+            } catch (e) {
+                console.error('Error fetching products', e)
+            }  
+        })()
+    }, [])
 
     return (
         <div className={styles.page}>
@@ -36,7 +58,17 @@ export default function ArtworkDetails() {
             <section className={styles.showcase}> {/* Right section of the page that contains project showacase */}
                     <div className={styles.background_art}></div>
                     <div className={styles.art}></div>
-                    <div className={styles.more}></div>
+
+                    <div className={styles.more}>
+                        <div className={styles.head}> 
+                            <p>More Projects</p> 
+                            <FilterTab choice={'All'} /> 
+                            <button className={styles.buttons}><Expand size={14} /></button> 
+                            <button className={styles.buttons}><ChevronRight size={14} /></button> 
+                        </div>
+                        
+                        <ScrollContainer projects={artwork} /> 
+                    </div>
             </section> 
         </div>
     )

@@ -79,26 +79,70 @@
         position: relative;
         height: 100%;
         /* background-color: red; */
-        border: 1px solid white;
+        /* border: 1px solid white; */
     }
 
     .art {
         grid-area: 1/1;
         height: 90%;
         /* background-color: yellow; */
-        border: 1px solid white;
+        /* border: 1px solid white; */
         z-index: 1;
     }
 
     .more {
-        /* background-color: green; */
-        border: 1px solid white;
+        border: var(--border);
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        height: max-content;
+        /* height: max(15%, 70px); copy this dimensions to scroll container */
         border-radius: 5px;
-        height: 80px;
-        width: 300px;
         position: fixed;
-        bottom: 10px;
-        right: 10px;
+        bottom: 20px;
+        right: max(6%, 20px);
+        padding: 5px;
+        background-color: var(--background);
         z-index: 1;
+
+        .head {
+            height: max-content;
+            color: var(--text-muted);
+            font-family: var(--text-font);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            padding-bottom: 5px;
+            border-bottom: var(--border);
+            margin-bottom: 5px;
+        }
+
+        .buttons {
+            background-color: var(--background);
+            border: var(--border);
+            color: var(--text-muted);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            padding:  5px;
+            display: flex;
+            place-items: center;
+            transition: 0.2s;
+
+            &:hover {
+                color: var(--background);
+                background-color: var(--primary-color);
+            }
+        }
+
+        .buttons, button {
+            background-color: var(--hover-color);
+        }
+
+        p {
+            flex: 1;
+            margin: 0;
+        }
     }
 }

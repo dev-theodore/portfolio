@@ -11,6 +11,7 @@ import styles from './ArtworkDetails.module.css'
 
 export default function ArtworkDetails() {
 
+    const title = 'yuji itadori'
     const artTabs = ['Blender', 'Maya', 'Unreal', 'Unity', 'Godot','Krita', 'DaVinci Resolve']
     const [artwork, setArtwork] = useState([])
 
@@ -31,13 +32,39 @@ export default function ArtworkDetails() {
         })()
     }, [])
 
+    function handleLineBreak(text) {
+        let wordArray = text.toUpperCase().split(' ')
+
+        if(wordArray.length >= 2) {
+            let [firstWord, secondWord, ...rest] = wordArray
+            let first = firstWord.length
+            let second = secondWord.length
+            
+            if(first >= 5 && second >= 6 && first !== second) {
+                return (
+                    <div>{firstWord} <br /> {`${secondWord} ${rest.join(' ')}`}</div>
+                )
+            }
+        }
+
+        return text.toUpperCase()
+    }
+
     return (
         <div className={styles.page}>
             <section className={styles.info}> {/*Left section of the page that contains info and images */}
                 <BackButton path='/3d-artwork' />
 
-                <h1>God of War</h1>
+                <h1>{handleLineBreak(title)}</h1>
 
+                <div className={styles.decoration}>
+                    <div className={styles.divider}></div>
+                    <div className={styles.categories}>
+                        <p>{'character'.toUpperCase()}</p> 
+                        <p>{'game ready'.toUpperCase()}</p>
+                    </div>
+                </div>
+        
                 <Description 
                     tabs={artTabs}
                     description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed odio nec augue 

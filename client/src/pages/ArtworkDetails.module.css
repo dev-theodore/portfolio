@@ -9,15 +9,26 @@
     height: max-content;
     padding-top: 30px;
 
-    >section { /*overwriting style of *Description* component*/
+    >section { /* overwriting stylef of **Description** component */
         margin-top: 0;
         padding-bottom: 20px;
+
+        p {
+            width: 75%;
+        }
+
+        div {
+            width: 75%;
+        }
     }
 
     >h1 { 
         margin: 0;
         padding-top: 30px;
-        font-family: var(--heading-font);
+        font-family: var(--special-font);
+        font-size: 3rem;
+        font-weight: 400;
+        font-style: normal;
     }
 
     .image_container {
@@ -61,6 +72,65 @@
             border-radius: 5px;
             border: var(--border);
         }
+    }
+}
+
+.decoration {
+    margin-top: 10px;
+    color: var(--text-primary);
+    font-family: var(--heading-font);
+    font-weight: bold;
+    font-size: 0.80rem;
+    letter-spacing: 1px;
+    height: max;
+
+    .divider {
+        height: 2px;
+        width: max(250px, 70%);
+        background-color: rgb(137, 74, 240);
+    }
+
+    .categories {
+        display: flex;
+        height: max-content;
+
+        :nth-child(1) {
+            background-color: rgb(137, 74, 240);
+            clip-path: polygon(0 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+            padding-left: 10px;
+            z-index: 1;
+        }
+
+        :nth-child(2) {
+            color: rgb(137, 74, 240);
+            background-color: var(--background);
+            clip-path: polygon(15px 0, 100% 0, calc(100% - 15px)  100%, 0 100%);
+            margin-left: -17px;
+            border-right: none;
+            position: relative;
+            z-index: 0;
+
+            &::after {
+                content: '';
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: calc(100% - 16px);
+                clip-path: polygon(14px 0, 100% 0, calc(100% - 15px)  100%, 0 100%);
+                background-color: rgb(137, 74, 240);
+                position: absolute;
+            }
+        }
+    }
+
+    p {
+        width: max-content;
+        height: max-content;
+        margin: 0;
+        padding: 2px 20px;
+        border-inline: 2px solid;
+        border-bottom: 2px solid;
+        border-color: rgb(137, 74, 240);
     }
 }
 

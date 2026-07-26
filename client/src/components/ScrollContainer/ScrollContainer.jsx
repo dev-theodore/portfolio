@@ -1,12 +1,9 @@
-import SuggestionCard from "../Cards/SuggestionCard";
-// import Card from '../Cards/Card'
-// import for artwork pop up card
 import { useRef } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import styles from './ScrollContainer.module.css'
 
 
-export default function ScrollContainer({ projects }) { // Recieves an array of contents as prop
+export default function ScrollContainer({ projects, CardType, hoverState }) { // Recieves an *array* of contents and a *component* as prop
 
     const containerRef = useRef(null);
 
@@ -27,9 +24,10 @@ export default function ScrollContainer({ projects }) { // Recieves an array of 
             <div className={styles.scroll_container} ref={containerRef}>  
                 {
                     projects.map(project => (
-                        <SuggestionCard
+                        <CardType
                             key={project.id} 
                             image={project.image}
+                            title={project.title}
                         />  
                     ))
                 }

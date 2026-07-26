@@ -1,8 +1,10 @@
 import Description from '../components/Description/Description'
 import ScrollContainer from '../components/ScrollContainer/ScrollContainer'
+import SuggestionCard from '../components/Cards/SuggestionCard'
+import ArtPopUpCard from "../components/Cards/ArtPopUpCard"
 import { BackButton } from '../components/Buttons/Buttons'
 import { FilterTab } from '../components/Tabs/Tabs'
-import { Maximize2, Expand, ChevronRight } from 'lucide-react'
+import { Maximize2, Minimize2, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import getArtwork from '../api/getArtwork'
 import imageSrc from '../data/imageSrc'
@@ -14,6 +16,8 @@ export default function ArtworkDetails() {
     const title = 'yuji itadori'
     const artTabs = ['Blender', 'Maya', 'Unreal', 'Unity', 'Godot','Krita', 'DaVinci Resolve']
     const [artwork, setArtwork] = useState([])
+    const [isExpanded, setIsExpanded] = useState(false)
+
 
     useEffect(() => {
         (async function fetchArtwork() {
@@ -49,6 +53,11 @@ export default function ArtworkDetails() {
 
         return text.toUpperCase()
     }
+
+    function expand() {
+        isExpanded ? setIsExpanded(false) : setIsExpanded(true)
+    }
+
 
     return (
         <div className={styles.page}>
@@ -90,11 +99,19 @@ export default function ArtworkDetails() {
                         <div className={styles.head}> 
                             <p>More Projects</p> 
                             <FilterTab choice={'All'} /> 
-                            <button className={styles.buttons}><Expand size={14} /></button> 
+
+                            <button className={styles.buttons} onClick={() => expand()}>
+                                {isExpanded ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
+                            </button> 
                             <button className={styles.buttons}><ChevronRight size={14} /></button> 
+
                         </div>
                         
-                        <ScrollContainer projects={artwork} /> 
+                        {
+                            isExpanded ? 
+                            <ScrollContainer projects={artwork} CardType={ArtPopUpCard} /> :
+                            <ScrollContainer projects={artwork} CardType={SuggestionCard} />
+                        }
                     </div>
             </section> 
         </div>

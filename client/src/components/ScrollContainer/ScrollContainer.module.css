@@ -1,6 +1,6 @@
 .scroll_container {
     display: flex;
-    gap: 1px;
+    gap: 5px;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -24,7 +24,7 @@
     height: max-content;
     width: 100%;
     border-radius: 5px;
-    border: var(--border);     
+    /* border: var(--border);      */
 
     button {
         display: grid;
